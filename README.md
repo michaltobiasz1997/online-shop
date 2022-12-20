@@ -10,7 +10,7 @@ Aby uzyskać token dla użytkownika typu "customer" można skorzystać z pomocni
 
 <a href="https://ibb.co/yFHDgZ0"><img src="https://i.ibb.co/m5fmh2J/Zrzut-ekranu-2022-12-20-o-12-34-03.png" alt="Zrzut-ekranu-2022-12-20-o-12-34-03" border="0"></a>
 
-<b>Oba endpointy zostały stworzone tylko po to, aby ułatwić sprawdzanie endpointów.</b>
+<b>Oba endpointy zostały stworzone tylko po to, aby ułatwić sprawdzanie odpowiedzi.</b>
 
 ## Dalszy rozwój
 

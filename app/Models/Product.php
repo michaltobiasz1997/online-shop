@@ -23,7 +23,7 @@ use Illuminate\Support\Carbon;
  * @property Carbon $created_at
  * @property Carbon $updated_at
  * @property Carbon $deleted_at
- * @property Collection | Wishlist[] $wishlists
+ * @property Collection|Wishlist[] $wishlists
  */
 class Product extends Model
 {

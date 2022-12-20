@@ -1,10 +1,14 @@
 ## Informacje o zadaniu
 
-Po pobraniu projektu, proszę o zaseedowanie bazy danych.
+<b>Po pobraniu projektu, proszę o zaseedowanie bazy danych.</b>
 
-Następnie aby uzyskać token dla admina skorzystać z pomocniczego endpointu, jak na zdjęciu poniżej.
+Następnie aby uzyskać token dla admina skorzystać z pomocniczego endpointu do logowania.
 
 <a href="https://ibb.co/5vCbfdb"><img src="https://i.ibb.co/HYR5k05/Zrzut-ekranu-2022-12-20-o-11-52-49.png" alt="Zrzut-ekranu-2022-12-20-o-11-52-49" border="0"></a>
+
+Aby uzyskać token dla użytkownika typu "customer" można skorzystać z pomocniczego endpointu do rejestracji.
+
+<a href="https://ibb.co/yFHDgZ0"><img src="https://i.ibb.co/m5fmh2J/Zrzut-ekranu-2022-12-20-o-12-34-03.png" alt="Zrzut-ekranu-2022-12-20-o-12-34-03" border="0"></a>
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 

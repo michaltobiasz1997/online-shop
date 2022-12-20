@@ -10,7 +10,7 @@ class AttachProductAction
     public function __invoke(Wishlist $wishlist, Product $product): Wishlist
     {
         if ($wishlist->products->doesntContain($product)) {
-            //$wishlist->products()->attach($product);
+            $wishlist->products()->attach($product);
         }
 
         return $wishlist->refresh();

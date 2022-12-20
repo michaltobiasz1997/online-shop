@@ -10,6 +10,8 @@ Aby uzyskać token dla użytkownika typu "customer" można skorzystać z pomocni
 
 <a href="https://ibb.co/yFHDgZ0"><img src="https://i.ibb.co/m5fmh2J/Zrzut-ekranu-2022-12-20-o-12-34-03.png" alt="Zrzut-ekranu-2022-12-20-o-12-34-03" border="0"></a>
 
+<b>Oba endpointy zostały stworzone tylko po to, aby ułatwić sprawdzanie endpointów.</b>
+
 ## Dalszy rozwój
 
 Realizując dalej projekt, niezbędnym elementem byłoby zaimplementowanie procesu zamówień, co wiązałoby się przykładowo z zmniejszeniem "quantity" produktu po pomyślnie ukończonym procesie, aby nie sprzedawać produktów, których nie mamy w magazynie. Wtedy dodając produkt do koszyka powinna być również przesłana ilość produktu (przykładowo Buty Adidas 2 sztuki)

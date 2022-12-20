@@ -23,19 +23,18 @@ Route::prefix('auth')->controller(AuthController::class)->group(function () {
 });
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::get('users', [UserController::class, 'index'])->middleware('can:users.viewAny');
+    Route::get('users', [UserController::class, 'index']);
 
-    Route::get('products', [ProductController::class, 'index'])->middleware('can:products.viewAny');
+    Route::get('products', [ProductController::class, 'index']);
 
     Route::apiResource('wishlists', WishlistController::class);
-    Route::group(['prefix' => 'wishlists/{wishlist}'], function () {
-        Route::controller(WishlistController::class)->group(function () {
-            Route::post('clear', 'clear');
 
-            Route::group(['prefix' => 'products/{product}'], function () {
-                Route::post('attach', 'attachProduct');
-                Route::delete('detach', 'detachProduct');
-            });
+    Route::prefix('wishlists/{wishlist}')->controller(WishlistController::class)->group(function () {
+        Route::delete('clear', 'clear');
+
+        Route::group(['prefix' => 'products/{product}'], function () {
+            Route::post('attach', 'attachProduct');
+            Route::delete('detach', 'detachProduct');
         });
     });
 });

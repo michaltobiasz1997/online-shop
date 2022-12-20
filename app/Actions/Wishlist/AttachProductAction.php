@@ -9,6 +9,8 @@ class AttachProductAction
 {
     public function __invoke(Wishlist $wishlist, Product $product): Wishlist
     {
+        $wishlist->load('products');
+
         if ($wishlist->products->doesntContain($product)) {
             $wishlist->products()->attach($product);
         }

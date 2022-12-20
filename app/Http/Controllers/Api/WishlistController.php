@@ -12,8 +12,10 @@ use App\Http\Requests\WishlistRequest;
 use App\Http\Resources\WishlistCollection;
 use App\Http\Resources\WishlistResource;
 use App\Models\Product;
+use App\Models\User;
 use App\Models\Wishlist;
 use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Response as HttpResponse;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,14 +28,17 @@ class WishlistController extends Controller
     {
         $this->authorize('viewAny', Wishlist::class);
 
+        /** @var User $user */
+        $user = Auth::user();
+
         $wishlists = Wishlist::query()
-            ->withCount('products');
+            ->when(!$user->hasRole('admin'), function (Builder $query) use ($user) {
+                $query->where('user_id', $user->id);
+            })
+            ->withCount('products')
+            ->get();
 
-        if (! Auth::user()->hasRole('admin')) {
-            $wishlists = $wishlists->where('user_id', auth()->id());
-        }
-
-        return new WishlistCollection($wishlists->get());
+        return new WishlistCollection($wishlists);
     }
 
     /**
@@ -101,7 +106,7 @@ class WishlistController extends Controller
     {
         $this->authorize('attachProduct', [$wishlist, $product]);
 
-        $wishlist = $attachProductAction($wishlist->load('products'), $product);
+        $wishlist = $attachProductAction($wishlist, $product);
 
         return new WishlistResource($wishlist);
     }

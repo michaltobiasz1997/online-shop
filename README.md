@@ -13,4 +13,4 @@ Aby uzyskać token dla użytkownika typu "customer" można skorzystać z pomocni
 ## Dalszy rozwój
 
 Realizując dalej projekt, niezbędnym elementem byłoby zaimplementowanie procesu zamówień, co wiązałoby się przykładowo z zmniejszeniem "quantity" produktu po pomyślnie ukończonym procesie, aby nie sprzedawać produktów, których nie mamy w magazynie.
-Analizując treść zadania liste życzeń potraktowałem, jak zakładkę "ulubione" w sklepie internetowym.
+Analizując treść zadania liste życzeń potraktowałem, jak zakładkę "ulubione" w sklepie internetowym, stąd dodanie produktu do listy życzeń nie zmniejsza "quantity" produktu.

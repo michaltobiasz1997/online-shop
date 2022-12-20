@@ -1,4 +1,6 @@
-## About Laravel
+## Informacje o zadaniu
+
+Po pobraniu projektu, proszę o zaseedowanie bazy danych.
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
